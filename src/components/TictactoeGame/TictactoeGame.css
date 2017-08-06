@@ -1,0 +1,8 @@
+.TictactoeGame__message {
+  text-align: center;
+}
+
+.TictactoeGame__img {
+  width: 20px;
+  height: 20px;
+}
