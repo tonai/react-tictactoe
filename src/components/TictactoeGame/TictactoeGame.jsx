@@ -16,7 +16,7 @@ class TictactoeGame extends React.PureComponent {
     this.setState(prevState => {
       const board = this.cloneBoard(prevState.board);
       board[row][col] = prevState.currentPlayer;
-      const status = this.checkVictory(board);
+      const status = this.checkVictory(board, row, col);
       return {
         board,
         currentPlayer: prevState.currentPlayer === TICTACTOE_PLAYER_1
@@ -31,14 +31,10 @@ class TictactoeGame extends React.PureComponent {
     this.setState(this.getInitialState());
   }
 
-  checkVictory(board) {
-    const player = this.checkVictoryCol(board, 0)
-      || this.checkVictoryCol(board, 1)
-      || this.checkVictoryCol(board, 2)
+  checkVictory(board, row, col) {
+    const player = this.checkVictoryCol(board, col)
       || this.checkVictoryDiagonals(board)
-      || this.checkVictoryRow(board, 0)
-      || this.checkVictoryRow(board, 1)
-      || this.checkVictoryRow(board, 2);
+      || this.checkVictoryRow(board, row);
 
     const countEmptyCell = board.reduce(
       (acc, row) => acc + row.reduce(
