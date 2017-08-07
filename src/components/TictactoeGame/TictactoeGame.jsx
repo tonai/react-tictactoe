@@ -9,6 +9,8 @@ import {
   TICTACTOE_STATUS_PLAYER2WIN
 } from '../TictactoeCell/TictactoeCell.jsx';
 import TictactoeBoard from '../TictactoeBoard/TictactoeBoard.jsx';
+import circleImage from '../../assets/images/circle.svg';
+import crossImage from '../../assets/images/cross.svg';
 import './TictactoeGame.css';
 
 class TictactoeGame extends React.PureComponent {
@@ -111,9 +113,9 @@ class TictactoeGame extends React.PureComponent {
           {this.state.status === TICTACTOE_STATUS_RUNNING && (
             <p>
               Current player : {this.state.currentPlayer === TICTACTOE_PLAYER_1 ? (
-                <img alt="Player 1" className="TictactoeGame__img" src="assets/images/cross.svg" />
+                <img alt="Player 1" className="TictactoeGame__img" src={crossImage} />
               ) : (
-                <img alt="Player 2" className="TictactoeGame__img" src="assets/images/circle.svg" />
+                <img alt="Player 2" className="TictactoeGame__img" src={circleImage} />
               )}
             </p>
           )}

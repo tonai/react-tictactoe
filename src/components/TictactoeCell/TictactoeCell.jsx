@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import './TictactoeCell.css';
+import circleImage from '../../assets/images/circle.svg';
+import crossImage from '../../assets/images/cross.svg';
 
 export const TICTACTOE_PLAYER_1 = 'PLAYER_1';
 export const TICTACTOE_PLAYER_2 = 'PLAYER_2';
@@ -22,9 +24,9 @@ function TictactoeCell({col, onClick, row, status, value}) {
   return (
     <div {...attributes} >
       {value && (value === TICTACTOE_PLAYER_1 ? (
-        <img alt="Player 1" className="TictactoeCell__img" src="assets/images/cross.svg" />
+        <img alt="Player 1" className="TictactoeCell__img" src={crossImage} />
       ) : (
-        <img alt="Player 2" className="TictactoeCell__img" src="assets/images/circle.svg" />
+        <img alt="Player 2" className="TictactoeCell__img" src={circleImage} />
       ))}
     </div>
   );
