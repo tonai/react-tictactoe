@@ -7,7 +7,8 @@ import {
   TICTACTOE_STATUS_RUNNING,
   TICTACTOE_STATUS_PLAYER1WIN,
   TICTACTOE_STATUS_PLAYER2WIN
-} from '../TictactoeCell/TictactoeCell.jsx';
+} from '../../settings/const';
+
 import TictactoeBoard from '../TictactoeBoard/TictactoeBoard.jsx';
 import circleImage from '../../assets/images/circle.svg';
 import crossImage from '../../assets/images/cross.svg';

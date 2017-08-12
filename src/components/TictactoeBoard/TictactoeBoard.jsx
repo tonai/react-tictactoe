@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import TictactoeCell, { TICTACTOE_STATUS_RUNNING } from '../TictactoeCell/TictactoeCell.jsx';
+import { TICTACTOE_STATUS_RUNNING } from '../../settings/const';
+
+import TictactoeCell from '../TictactoeCell/TictactoeCell.jsx';
 import './TictactoeBoard.css';
 
 function TictactoeBoard({board, onClick, status}) {
